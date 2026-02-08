@@ -110,7 +110,7 @@ export default function NightClubGallery() {
 
       {status === "error" && (
         <div className="galleryFallback">
-          Could not load gallery. Is the API running on localhost:4000?
+          Could not load gallery right now. Please try again later.
         </div>
       )}
 

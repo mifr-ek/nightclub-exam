@@ -115,9 +115,9 @@ export default function BlogPost() {
   function validate() {
     const next = {};
 
-    if (!name.trim()) next.name = "Indtast dit navn.";
+    if (!name.trim()) next.name = "Enter your name.";
     if (!content.trim())
-      next.content = "Skriv en kommentar (feltet må ikke være tomt).";
+      next.content = "Write a comment (this field must not be empty).";
 
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -129,7 +129,7 @@ export default function BlogPost() {
 
     if (!validate()) {
       setSubmitStatus("fail");
-      setMessage("Tjek felterne – nogle mangler eller er udfyldt forkert.");
+      setMessage("Please check all fields are filled in correctly.");
       return;
     }
 
@@ -158,11 +158,11 @@ export default function BlogPost() {
       setContent("");
 
       setSubmitStatus("done");
-      setMessage("Tak! Din kommentar er nu sendt ✅");
+      setMessage("Your comment has been send ✅");
     } catch {
       setSubmitStatus("fail");
       setMessage(
-        "Vi kunne desværre ikke sende kommentaren lige nu. Prøv igen om lidt.",
+        "Unable to send the comment right now. Please try again later.",
       );
     } finally {
       window.setTimeout(() => setSubmitStatus("idle"), 1200);
@@ -189,12 +189,13 @@ export default function BlogPost() {
 
       <div className="blogPostInner">
         {postStatus === "loading" && (
-          <div className="formMessage">Loader blogindlæg…</div>
+          <div className="formMessage">Loading blog post...</div>
         )}
 
         {postStatus === "error" && (
           <div className="formMessage isError">
-            Blogindlægget kunne ikke hentes lige nu. Prøv igen senere.
+            This blog post could not be retrieved right now. Please try again
+            later.
           </div>
         )}
 
@@ -218,7 +219,7 @@ export default function BlogPost() {
                 ))
               ) : (
                 <p className="blogPostText" style={{ opacity: 0.85 }}>
-                  (Der er endnu ikke noget indhold på dette indlæg.)
+                  (There is no content on this post yet.)
                 </p>
               )}
             </div>
@@ -230,12 +231,13 @@ export default function BlogPost() {
             </h2>
 
             {commentsStatus === "loading" && (
-              <div className="formMessage">Loader kommentarer…</div>
+              <div className="formMessage">Loading comments...</div>
             )}
 
             {commentsStatus === "error" && (
               <div className="formMessage isError">
-                Kommentarer kunne ikke hentes lige nu. Prøv igen senere.
+                Comments could not be retrieved right now. Please try again
+                later.
               </div>
             )}
 
@@ -243,7 +245,7 @@ export default function BlogPost() {
               <div className="blogPostComments">
                 {comments.length === 0 ? (
                   <div className="formMessage" style={{ opacity: 0.85 }}>
-                    Ingen kommentarer endnu – vær den første!
+                    No comments yet - be the first!
                   </div>
                 ) : (
                   comments.map((c) => (
@@ -274,8 +276,8 @@ export default function BlogPost() {
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="Dit navn"
-                  aria-label="Dit navn"
+                  placeholder="Your name"
+                  aria-label="Your name"
                   aria-invalid={Boolean(errors.name)}
                   disabled={submitStatus === "saving"}
                 />
@@ -285,8 +287,8 @@ export default function BlogPost() {
                 className={`blogPostTextarea ${errors.content ? "hasError" : ""}`}
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
-                placeholder="Din kommentar"
-                aria-label="Din kommentar"
+                placeholder="Your comment"
+                aria-label="Your comment"
                 aria-invalid={Boolean(errors.content)}
                 disabled={submitStatus === "saving"}
               />
@@ -297,7 +299,7 @@ export default function BlogPost() {
                   type="submit"
                   disabled={submitStatus === "saving"}
                 >
-                  {submitStatus === "saving" ? "SENDER…" : "SUBMIT"}
+                  {submitStatus === "saving" ? "SENDING…" : "SUBMIT"}
                 </button>
               </div>
 
@@ -317,7 +319,7 @@ export default function BlogPost() {
             </form>
 
             <Link className="blogPostBack" to="/blog">
-              ← Tilbage til blog
+              ← Return to blog
             </Link>
           </>
         )}

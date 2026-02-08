@@ -35,7 +35,7 @@ export default function Newsletter() {
         if (!alive) return;
         setStatus("error");
         setMessage(
-          "Vi kunne ikke hente nyhedsbrev-tilmeldinger lige nu. Tjek at API’et kører på localhost:4000.",
+          "Unable to retrieve sign-ups for Newsletter right now. Please try again later.",
         );
       }
     }
@@ -54,14 +54,14 @@ export default function Newsletter() {
 
     if (!trimmed) {
       setStatus("error");
-      setMessage("Indtast venligst din e-mail.");
+      setMessage("Enter your email.");
       return;
     }
 
     if (!isValidEmail(trimmed)) {
       setStatus("error");
       setMessage(
-        "Indtast venligst en gyldig e-mail, så vi kan tilmelde dig nyhedsbrevet.",
+        "Please enter a valid email so we can sign you up for the newsletter.",
       );
       return;
     }
@@ -72,7 +72,7 @@ export default function Newsletter() {
 
     if (already) {
       setStatus("error");
-      setMessage("Den e-mail er allerede tilmeldt.");
+      setMessage("This email has already been registered.");
       return;
     }
 
@@ -92,13 +92,13 @@ export default function Newsletter() {
       setItems((prev) => [created, ...prev]);
       setEmail("");
       setStatus("saved");
-      setMessage("Tak! Du er nu tilmeldt nyhedsbrevet 🎉");
+      setMessage("Thank you! You are now subscribed to the newsletter!");
 
       window.setTimeout(() => setStatus("ready"), 1200);
     } catch {
       setStatus("error");
       setMessage(
-        "Vi kunne desværre ikke tilmelde dig lige nu. Prøv igen om lidt.",
+        "Sorry, we were unable to sign you up right now. Please try again later.",
       );
     }
   }

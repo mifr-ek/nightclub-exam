@@ -133,13 +133,12 @@ export default function Blog() {
 
       <div className="blogInner">
         {status === "loading" && (
-          <div className="formMessage">Loader blogindlæg…</div>
+          <div className="formMessage">Loading blog posts...</div>
         )}
 
         {status === "error" && (
           <div className="formMessage isError">
-            Vi kunne ikke hente blogindlæg lige nu. Tjek at API’et kører på
-            localhost:4000.
+            Unable to retrieve blog posts right now. Please try again later.
           </div>
         )}
 
@@ -182,7 +181,7 @@ export default function Blog() {
                           ? "blogPageLink isActive"
                           : "blogPageLink"
                       }
-                      aria-label={`Gå til side ${p}`}
+                      aria-label={`Go to page ${p}`}
                     >
                       {p}
                     </Link>
@@ -194,7 +193,7 @@ export default function Blog() {
                     to={`/blog/page/${safePage + 1}`}
                     className="blogNextLink"
                   >
-                    næste &gt;
+                    next &gt;
                   </Link>
                 )}
               </div>

@@ -113,7 +113,7 @@ export default function EventsSlider() {
 
         {status === "error" && (
           <div className="eventsFallback">
-            Could not load events. Is the API running on localhost:4000?
+            Could not load events. Please try again later.
           </div>
         )}
 

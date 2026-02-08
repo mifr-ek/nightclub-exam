@@ -43,10 +43,6 @@ function isValidPhone(phone) {
   return /^[+0-9-]{6,20}$/.test(cleaned);
 }
 
-/**
- * Gem reservation som ISO timestamp.
- * Vi bruger "lokal kl. 20:00" og konverterer til ISO.
- */
 function toLocalEveningIso(ymd, hh = 20, mm = 0) {
   if (!ymd) return "";
   const local = new Date(
@@ -65,14 +61,13 @@ export default function BookTable() {
   const [comment, setComment] = useState("");
 
   const [reservations, setReservations] = useState([]);
-  const [status, setStatus] = useState("loading"); // loading | ready | error
-  const [submitStatus, setSubmitStatus] = useState("idle"); // idle | checking | saving | done | fail
+  const [status, setStatus] = useState("loading");
+  const [submitStatus, setSubmitStatus] = useState("idle");
   const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState({}); // { name?: string, email?: string, ... }
+  const [errors, setErrors] = useState({});
 
   const formRef = useRef(null);
 
-  // GET reservations
   useEffect(() => {
     const controller = new AbortController();
 
@@ -259,7 +254,6 @@ export default function BookTable() {
 
             <form onSubmit={onSubmit} noValidate>
               <div className="bookFormGrid">
-                {/* NAME */}
                 <div className="bookField">
                   <input
                     className={`bookInput ${errors.name ? "hasError" : ""}`}
@@ -275,7 +269,6 @@ export default function BookTable() {
                   )}
                 </div>
 
-                {/* EMAIL */}
                 <div className="bookField">
                   <input
                     className={`bookInput ${errors.email ? "hasError" : ""}`}
@@ -292,7 +285,6 @@ export default function BookTable() {
                   )}
                 </div>
 
-                {/* TABLE (readOnly) */}
                 <div className="bookField">
                   <input
                     className={`bookInput ${errors.table ? "hasError" : ""}`}
@@ -305,7 +297,6 @@ export default function BookTable() {
                   )}
                 </div>
 
-                {/* GUESTS */}
                 <div className="bookField">
                   <input
                     className={`bookInput ${errors.guests ? "hasError" : ""}`}
@@ -322,7 +313,6 @@ export default function BookTable() {
                   )}
                 </div>
 
-                {/* DATE */}
                 <div className="bookField">
                   <input
                     className={`bookDate ${errors.date ? "hasError" : ""}`}
@@ -338,7 +328,6 @@ export default function BookTable() {
                   )}
                 </div>
 
-                {/* PHONE */}
                 <div className="bookField">
                   <input
                     className={`bookInput ${errors.phone ? "hasError" : ""}`}
@@ -354,7 +343,6 @@ export default function BookTable() {
                   )}
                 </div>
 
-                {/* COMMENT */}
                 <div className="bookField" style={{ gridColumn: "1 / -1" }}>
                   <textarea
                     className="bookTextarea"

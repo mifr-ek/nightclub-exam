@@ -63,7 +63,7 @@ export default function RecentBlog() {
 
         {status === "error" && (
           <div className="recentBlogFallback recentBlogFallbackError">
-            Could not load blog posts. Is the API running on localhost:4000?
+            Could not load blog posts right now. Please try again later.
           </div>
         )}
 

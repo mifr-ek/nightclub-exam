@@ -130,7 +130,7 @@ export default function Testimonials() {
 
         {status === "error" && (
           <div className="testimonialsFallback">
-            Could not load testimonials. Is the API running on localhost:4000?
+            Could not load testimonials. Please try again later.
           </div>
         )}
 

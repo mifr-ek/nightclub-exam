@@ -169,7 +169,7 @@ export default function Contact() {
 
           <div className="contactActions">
             <button className="contactSend" type="submit" disabled={isSending}>
-              {isSending ? "SENDER..." : "SEND"}
+              {isSending ? "SENDING..." : "SEND"}
             </button>
           </div>
 
