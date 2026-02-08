@@ -1,0 +1,333 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Neon Nights Grand Opening",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae elit a lacus auctor vehicula. Curabitur tempus risus in velit molestie efficitur. Sed sit amet pellentesque dolor, ac accumsan orci. Ut a varius lacus. Sed sed enim convallis, pulvinar magna vitae, condimentum est. Fusce mi erat, lacinia sit amet libero sed, varius luctus purus. Phasellus porta eleifend massa in hendrerit. Nunc fermentum massa quis urna pretium, et consectetur ante mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nec mauris ut justo maximus euismod id in nibh. Nam id ultricies sapien. Proin blandit at tellus in tincidunt. Fusce efficitur dignissim odio eu porta.",
+      "date": "2025-02-01T21:00:00.000Z",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/event-thumb1.jpg"
+      },
+      "location": "Center Stage"
+    },
+    {
+      "id": 2,
+      "title": "Retro Rewind: 80s & 90s",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae elit a lacus auctor vehicula. Curabitur tempus risus in velit molestie efficitur. Sed sit amet pellentesque dolor, ac accumsan orci. Ut a varius lacus. Sed sed enim convallis, pulvinar magna vitae, condimentum est. Fusce mi erat, lacinia sit amet libero sed, varius luctus purus. Phasellus porta eleifend massa in hendrerit. Nunc fermentum massa quis urna pretium, et consectetur ante mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nec mauris ut justo maximus euismod id in nibh. Nam id ultricies sapien. Proin blandit at tellus in tincidunt. Fusce efficitur dignissim odio eu porta.",
+      "date": "2025-02-08T21:00:00.000Z",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/event-thumb2.jpg"
+      },
+      "location": "Center Stage"
+    },
+    {
+      "id": 3,
+      "title": "Bass Drop: Dubstep Edition",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae elit a lacus auctor vehicula. Curabitur tempus risus in velit molestie efficitur. Sed sit amet pellentesque dolor, ac accumsan orci. Ut a varius lacus. Sed sed enim convallis, pulvinar magna vitae, condimentum est. Fusce mi erat, lacinia sit amet libero sed, varius luctus purus. Phasellus porta eleifend massa in hendrerit. Nunc fermentum massa quis urna pretium, et consectetur ante mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nec mauris ut justo maximus euismod id in nibh. Nam id ultricies sapien. Proin blandit at tellus in tincidunt. Fusce efficitur dignissim odio eu porta.",
+      "date": "2025-02-14T21:00:00.000Z",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/event-thumb3.jpg"
+      },
+      "location": "Center Stage"
+    },
+    {
+      "id": 4,
+      "title": "Techno Bunker Underground",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae elit a lacus auctor vehicula. Curabitur tempus risus in velit molestie efficitur. Sed sit amet pellentesque dolor, ac accumsan orci. Ut a varius lacus. Sed sed enim convallis, pulvinar magna vitae, condimentum est. Fusce mi erat, lacinia sit amet libero sed, varius luctus purus. Phasellus porta eleifend massa in hendrerit. Nunc fermentum massa quis urna pretium, et consectetur ante mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nec mauris ut justo maximus euismod id in nibh. Nam id ultricies sapien. Proin blandit at tellus in tincidunt. Fusce efficitur dignissim odio eu porta.",
+      "date": "2025-02-22T21:00:00.000Z",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/event-thumb4.jpg"
+      },
+      "location": "Center Stage"
+    },
+    {
+      "id": 5,
+      "title": "Disco Fever Saturday",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae elit a lacus auctor vehicula. Curabitur tempus risus in velit molestie efficitur. Sed sit amet pellentesque dolor, ac accumsan orci. Ut a varius lacus. Sed sed enim convallis, pulvinar magna vitae, condimentum est. Fusce mi erat, lacinia sit amet libero sed, varius luctus purus. Phasellus porta eleifend massa in hendrerit. Nunc fermentum massa quis urna pretium, et consectetur ante mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nec mauris ut justo maximus euismod id in nibh. Nam id ultricies sapien. Proin blandit at tellus in tincidunt. Fusce efficitur dignissim odio eu porta.",
+      "date": "2025-03-01T21:00:00.000Z",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/event-thumb5.jpg"
+      },
+      "location": "Center Stage"
+    },
+    {
+      "id": 6,
+      "title": "House Party Vibes",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae elit a lacus auctor vehicula. Curabitur tempus risus in velit molestie efficitur. Sed sit amet pellentesque dolor, ac accumsan orci. Ut a varius lacus. Sed sed enim convallis, pulvinar magna vitae, condimentum est. Fusce mi erat, lacinia sit amet libero sed, varius luctus purus. Phasellus porta eleifend massa in hendrerit. Nunc fermentum massa quis urna pretium, et consectetur ante mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nec mauris ut justo maximus euismod id in nibh. Nam id ultricies sapien. Proin blandit at tellus in tincidunt. Fusce efficitur dignissim odio eu porta.",
+      "date": "2025-03-08T21:00:00.000Z",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/event-thumb6.jpg"
+      },
+      "location": "Center Stage"
+    }
+  ],
+  "blogposts": [
+    {
+      "id": 1,
+      "title": "Blog Post Title",
+      "author": "Admin",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis. Pellentesque in blandit neque. Cras venenatis orci ut massa efficitur, eget pretium nulla blandit. Quisque sodales suscipit convallis. Ut feugiat iaculis est, a feugiat erat finibus in. Maecenas lacinia, massa nec tempus aliquam, nisi erat feugiat lectus, nec aliquam nisl massa a diam. Phasellus a aliquet risus, non gravida ipsum. Cras rutrum risus sed massa consequat hendrerit. In faucibus in tellus a vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec vel sagittis diam, eu pharetra quam. Nullam rutrum, leo vestibulum porta posuere, libero ante semper libero, id faucibus massa ante vel lacus. Cras ultricies erat ultrices eros elementum ultrices. Donec lobortis lectus in tristique tempus. Sed dolor arcu, accumsan nec tortor vel, efficitur pretium turpis. Maecenas ac turpis vel diam euismod ornare. Nam et condimentum erat, nec pretium dui. In suscipit enim et tortor commodo tempor ut sed nibh. Maecenas venenatis sodales urna, at rutrum orci suscipit id. Aenean egestas ut libero id interdum. Nam ex erat, porttitor eget lacus et, dictum lacinia leo. Duis volutpat porttitor accumsan. Ut quis velit id dui posuere ullamcorper. Quisque ut placerat nisi. Donec sollicitudin malesuada convallis. Maecenas id aliquet sem. Vivamus et auctor risus, vel facilisis magna. Suspendisse dapibus auctor enim ut vehicula. Suspendisse faucibus erat ac arcu gravida, vitae venenatis felis egestas. Fusce facilisis orci nunc, non tincidunt lacus suscipit vel. Nam ut sagittis nisi, nec ullamcorper lacus. Nam sed sodales diam. Mauris consectetur mauris vel ultricies egestas. In hac habitasse platea dictumst. Donec tincidunt velit id nibh efficitur ultrices. Curabitur posuere dapibus cursus. Morbi maximus, mi sed pharetra mollis, mauris orci lobortis ligula, ac malesuada odio nulla id dolor. Phasellus id ultrices urna, in laoreet libero. Nulla in dolor auctor, hendrerit felis id, fringilla nisi. Sed eget massa a risus facilisis euismod. Aliquam sed sagittis dui, dictum rhoncus est. Vestibulum aliquet rutrum elementum. Curabitur auctor egestas vehicula. Nunc sagittis, erat ut sollicitudin lobortis, purus dui pretium dui, at euismod libero ipsum quis eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce elementum lectus et ultrices faucibus. Morbi ut neque in arcu pharetra laoreet. Vivamus malesuada neque massa, varius tincidunt mauris egestas ut. Praesent quis elementum leo. Suspendisse tristique condimentum auctor. Aenean eleifend ligula eget velit posuere maximus. Cras posuere id eros vitae malesuada. Sed vitae arcu nunc. Duis ligula nulla, euismod ac leo et, vestibulum maximus enim. Ut vel neque pretium, dictum nulla ut, iaculis augue. Duis pharetra, risus sit amet gravida tincidunt, libero sem luctus quam, ullamcorper luctus nunc turpis blandit nibh. Proin et justo eget magna lobortis ultricies ut at urna. Aliquam scelerisque rutrum massa. In vel tellus in diam varius iaculis. Aliquam elementum ligula eget odio mattis vulputate. In egestas, ipsum vel sollicitudin iaculis, diam orci bibendum augue, at scelerisque purus neque eu neque.",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/blog_full1.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Blog Post Title",
+      "author": "Admin",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis. Pellentesque in blandit neque. Cras venenatis orci ut massa efficitur, eget pretium nulla blandit. Quisque sodales suscipit convallis. Ut feugiat iaculis est, a feugiat erat finibus in. Maecenas lacinia, massa nec tempus aliquam, nisi erat feugiat lectus, nec aliquam nisl massa a diam. Phasellus a aliquet risus, non gravida ipsum. Cras rutrum risus sed massa consequat hendrerit. In faucibus in tellus a vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec vel sagittis diam, eu pharetra quam. Nullam rutrum, leo vestibulum porta posuere, libero ante semper libero, id faucibus massa ante vel lacus. Cras ultricies erat ultrices eros elementum ultrices. Donec lobortis lectus in tristique tempus. Sed dolor arcu, accumsan nec tortor vel, efficitur pretium turpis. Maecenas ac turpis vel diam euismod ornare. Nam et condimentum erat, nec pretium dui. In suscipit enim et tortor commodo tempor ut sed nibh. Maecenas venenatis sodales urna, at rutrum orci suscipit id. Aenean egestas ut libero id interdum. Nam ex erat, porttitor eget lacus et, dictum lacinia leo. Duis volutpat porttitor accumsan. Ut quis velit id dui posuere ullamcorper. Quisque ut placerat nisi. Donec sollicitudin malesuada convallis. Maecenas id aliquet sem. Vivamus et auctor risus, vel facilisis magna. Suspendisse dapibus auctor enim ut vehicula. Suspendisse faucibus erat ac arcu gravida, vitae venenatis felis egestas. Fusce facilisis orci nunc, non tincidunt lacus suscipit vel. Nam ut sagittis nisi, nec ullamcorper lacus. Nam sed sodales diam. Mauris consectetur mauris vel ultricies egestas. In hac habitasse platea dictumst. Donec tincidunt velit id nibh efficitur ultrices. Curabitur posuere dapibus cursus. Morbi maximus, mi sed pharetra mollis, mauris orci lobortis ligula, ac malesuada odio nulla id dolor. Phasellus id ultrices urna, in laoreet libero. Nulla in dolor auctor, hendrerit felis id, fringilla nisi. Sed eget massa a risus facilisis euismod. Aliquam sed sagittis dui, dictum rhoncus est. Vestibulum aliquet rutrum elementum. Curabitur auctor egestas vehicula. Nunc sagittis, erat ut sollicitudin lobortis, purus dui pretium dui, at euismod libero ipsum quis eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce elementum lectus et ultrices faucibus. Morbi ut neque in arcu pharetra laoreet. Vivamus malesuada neque massa, varius tincidunt mauris egestas ut. Praesent quis elementum leo. Suspendisse tristique condimentum auctor. Aenean eleifend ligula eget velit posuere maximus. Cras posuere id eros vitae malesuada. Sed vitae arcu nunc. Duis ligula nulla, euismod ac leo et, vestibulum maximus enim. Ut vel neque pretium, dictum nulla ut, iaculis augue. Duis pharetra, risus sit amet gravida tincidunt, libero sem luctus quam, ullamcorper luctus nunc turpis blandit nibh. Proin et justo eget magna lobortis ultricies ut at urna. Aliquam scelerisque rutrum massa. In vel tellus in diam varius iaculis. Aliquam elementum ligula eget odio mattis vulputate. In egestas, ipsum vel sollicitudin iaculis, diam orci bibendum augue, at scelerisque purus neque eu neque.",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/blog_full2.jpg"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Blog Post Title",
+      "author": "Admin",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis. Pellentesque in blandit neque. Cras venenatis orci ut massa efficitur, eget pretium nulla blandit. Quisque sodales suscipit convallis. Ut feugiat iaculis est, a feugiat erat finibus in. Maecenas lacinia, massa nec tempus aliquam, nisi erat feugiat lectus, nec aliquam nisl massa a diam. Phasellus a aliquet risus, non gravida ipsum. Cras rutrum risus sed massa consequat hendrerit. In faucibus in tellus a vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec vel sagittis diam, eu pharetra quam. Nullam rutrum, leo vestibulum porta posuere, libero ante semper libero, id faucibus massa ante vel lacus. Cras ultricies erat ultrices eros elementum ultrices. Donec lobortis lectus in tristique tempus. Sed dolor arcu, accumsan nec tortor vel, efficitur pretium turpis. Maecenas ac turpis vel diam euismod ornare. Nam et condimentum erat, nec pretium dui. In suscipit enim et tortor commodo tempor ut sed nibh. Maecenas venenatis sodales urna, at rutrum orci suscipit id. Aenean egestas ut libero id interdum. Nam ex erat, porttitor eget lacus et, dictum lacinia leo. Duis volutpat porttitor accumsan. Ut quis velit id dui posuere ullamcorper. Quisque ut placerat nisi. Donec sollicitudin malesuada convallis. Maecenas id aliquet sem. Vivamus et auctor risus, vel facilisis magna. Suspendisse dapibus auctor enim ut vehicula. Suspendisse faucibus erat ac arcu gravida, vitae venenatis felis egestas. Fusce facilisis orci nunc, non tincidunt lacus suscipit vel. Nam ut sagittis nisi, nec ullamcorper lacus. Nam sed sodales diam. Mauris consectetur mauris vel ultricies egestas. In hac habitasse platea dictumst. Donec tincidunt velit id nibh efficitur ultrices. Curabitur posuere dapibus cursus. Morbi maximus, mi sed pharetra mollis, mauris orci lobortis ligula, ac malesuada odio nulla id dolor. Phasellus id ultrices urna, in laoreet libero. Nulla in dolor auctor, hendrerit felis id, fringilla nisi. Sed eget massa a risus facilisis euismod. Aliquam sed sagittis dui, dictum rhoncus est. Vestibulum aliquet rutrum elementum. Curabitur auctor egestas vehicula. Nunc sagittis, erat ut sollicitudin lobortis, purus dui pretium dui, at euismod libero ipsum quis eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce elementum lectus et ultrices faucibus. Morbi ut neque in arcu pharetra laoreet. Vivamus malesuada neque massa, varius tincidunt mauris egestas ut. Praesent quis elementum leo. Suspendisse tristique condimentum auctor. Aenean eleifend ligula eget velit posuere maximus. Cras posuere id eros vitae malesuada. Sed vitae arcu nunc. Duis ligula nulla, euismod ac leo et, vestibulum maximus enim. Ut vel neque pretium, dictum nulla ut, iaculis augue. Duis pharetra, risus sit amet gravida tincidunt, libero sem luctus quam, ullamcorper luctus nunc turpis blandit nibh. Proin et justo eget magna lobortis ultricies ut at urna. Aliquam scelerisque rutrum massa. In vel tellus in diam varius iaculis. Aliquam elementum ligula eget odio mattis vulputate. In egestas, ipsum vel sollicitudin iaculis, diam orci bibendum augue, at scelerisque purus neque eu neque.",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/blog_full3.jpg"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "blogpostId": 3,
+      "name": "Robert Downey Junior",
+      "content": "Best club ever!",
+      "date": "2025-01-03T16:43:02.002Z"
+    },
+    {
+      "blogpostId": 2,
+      "name": "Robert Downey Junior",
+      "content": "What an amazing evening!",
+      "date": "2025-01-03T16:43:02.002Z",
+      "id": 2
+    },
+    {
+      "blogpostId": 3,
+      "name": "fdg",
+      "email": "miemichellaf@live.dk",
+      "content": "dfgdfg",
+      "date": "2026-02-03T19:04:27.356Z",
+      "id": 3
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery1_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 2,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery2_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 3,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery3_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 4,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery4_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 5,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery5_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 6,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery6_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 7,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery7_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 8,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery8_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 9,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery9_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 10,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery10_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 11,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery11_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 12,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery12_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 13,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery13_big.jpg"
+      },
+      "description": "A photo"
+    },
+    {
+      "id": 14,
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/gallery14_big.jpg"
+      },
+      "description": "A photo"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis. Pellentesque in blandit neque. Cras venenatis orci ut massa efficitur, eget pretium nulla blandit. Quisque sodales suscipit convallis. Ut feugiat iaculis est, a feugiat erat finibus in. Maecenas lacinia, massa nec tempus aliquam, nisi erat feugiat lectus, nec aliquam nisl massa a diam.",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/testimonial_1.jpg"
+      },
+      "facebook": "http://facebook.com",
+      "twitter": "http://twitter.com"
+    },
+    {
+      "id": 2,
+      "name": "Mary Doe",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis. Pellentesque in blandit neque. Cras venenatis orci ut massa efficitur, eget pretium nulla blandit. Quisque sodales suscipit convallis. Ut feugiat iaculis est, a feugiat erat finibus in. Maecenas lacinia, massa nec tempus aliquam, nisi erat feugiat lectus, nec aliquam nisl massa a diam.",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/testimonial_2.jpg"
+      },
+      "facebook": "http://facebook.com",
+      "twitter": "http://twitter.com"
+    },
+    {
+      "id": 3,
+      "name": "Steven Doe",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis. Pellentesque in blandit neque. Cras venenatis orci ut massa efficitur, eget pretium nulla blandit. Quisque sodales suscipit convallis. Ut feugiat iaculis est, a feugiat erat finibus in. Maecenas lacinia, massa nec tempus aliquam, nisi erat feugiat lectus, nec aliquam nisl massa a diam.",
+      "asset": {
+        "url": "http://localhost:4000/file-bucket/testimonial_3.jpg"
+      },
+      "facebook": "http://facebook.com",
+      "twitter": "http://twitter.com"
+    }
+  ],
+  "contact_messages": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@doe.com",
+      "content": "Hi, can I book a table sometime Friday?",
+      "date": "2025-02-04T23:00:01.251Z"
+    },
+    {
+      "name": "dgf",
+      "email": "miemichellaf@live.dk",
+      "content": "dfg",
+      "date": "2026-02-03T18:36:23.265Z",
+      "id": 2
+    },
+    {
+      "name": "Mie",
+      "email": "michellaf@xn--llive-9fa.dk",
+      "content": "dklfjns",
+      "date": "2026-02-03T18:41:42.864Z",
+      "id": 3
+    },
+    {
+      "name": "Mie Michella Frederiksen",
+      "email": "miemichellaf@live.dk",
+      "content": "d",
+      "date": "2026-02-07T23:47:01.204Z",
+      "id": 4
+    }
+  ],
+  "reservations": [
+    {
+      "name": "John Doe",
+      "email": "john@doe.com",
+      "table": "3",
+      "guests": "3",
+      "date": "2025-03-15T20:00:00.000Z",
+      "phone": "2342 78986",
+      "id": 2
+    },
+    {
+      "name": "Robert Downey Jr",
+      "email": "downey@mail.dk",
+      "table": "4",
+      "guests": "3",
+      "date": "2025-03-15T20:00:00.000Z",
+      "phone": "2342 78986",
+      "id": 3
+    },
+    {
+      "name": "Mie Michella Frederiksen",
+      "email": "miemichellaf@live.dk",
+      "phone": "93961610",
+      "table": "8",
+      "guests": "4",
+      "date": "2006-05-05T20:00:00.000Z",
+      "comment": "dfgfdgfdgfd",
+      "id": 4
+    },
+    {
+      "name": "sd",
+      "email": "miemichellaf@live.dk",
+      "phone": "93961610",
+      "table": "8",
+      "guests": "3",
+      "date": "0002-02-02T20:00:00.000Z",
+      "comment": "ssss",
+      "id": 5
+    }
+  ],
+  "newsletters": [
+    {
+      "id": 1,
+      "email": "john@doe.com"
+    },
+    {
+      "email": "miemichellaf@live.dk",
+      "id": 2
+    },
+    {
+      "email": "miemichella@live.dk",
+      "id": 3
+    }
+  ]
+}
