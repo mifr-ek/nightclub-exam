@@ -101,7 +101,37 @@ Selvom jeg ikke har arbejdet konsekvent med feature-branches fra start i dette p
 
 ---
 
-## API data
+### API og data
 
-Projektet anvender et lokalt API.  
-En kopi af `db.json` er inkluderet i repositoryet.
+Projektet anvender et lokalt API til håndtering af dynamisk indhold som events, blogindlæg, reservationer, testimonials og kontaktbeskeder.
+
+Databasefilen ligger her i projektet:
+client/api/db.json
+
+---
+
+### How to run the project
+
+Projektet består af to dele: et lokalt API og en client (frontend).
+
+#### 1. Start API’et
+API’et findes i mappen `client/api`.
+
+I terminal:
+
+cd client/api
+npm install
+npm start
+
+API’et kører herefter på:
+http://localhost:4000
+
+#### 2. Start client (frontend)
+Åben en ny terminal i projektets rodmappe:
+
+cd client
+npm install
+npm run dev
+
+Herefter kan projektet ses i browseren via den lokale Vite-adresse.
+Kort sagt, skal vi starte API’et i én terminal, og derefter åbne en ny terminal til at starte frontend.
