@@ -43,6 +43,10 @@ function isValidPhone(phone) {
   return /^[+0-9-]{6,20}$/.test(cleaned);
 }
 
+/**
+ * Gem reservation som ISO timestamp.
+ * Vi bruger "lokal kl. 20:00" og konverterer til ISO.
+ */
 function toLocalEveningIso(ymd, hh = 20, mm = 0) {
   if (!ymd) return "";
   const local = new Date(
@@ -61,13 +65,14 @@ export default function BookTable() {
   const [comment, setComment] = useState("");
 
   const [reservations, setReservations] = useState([]);
-  const [status, setStatus] = useState("loading");
-  const [submitStatus, setSubmitStatus] = useState("idle");
+  const [status, setStatus] = useState("loading"); // loading | ready | error
+  const [submitStatus, setSubmitStatus] = useState("idle"); // idle | checking | saving | done | fail
   const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({}); // { name?: string, email?: string, ... }
 
   const formRef = useRef(null);
 
+  // GET reservations
   useEffect(() => {
     const controller = new AbortController();
 
@@ -105,15 +110,23 @@ export default function BookTable() {
     const trimmedEmail = email.trim();
     const trimmedPhone = phone.trim();
 
-    if (!trimmedName) next.name = true;
-    if (!trimmedEmail || !isValidEmail(trimmedEmail)) next.email = true;
-    if (!table) next.table = true;
+    if (!trimmedName) next.name = "Please enter your name.";
+
+    if (!trimmedEmail) next.email = "Please enter your email.";
+    else if (!isValidEmail(trimmedEmail))
+      next.email = "Please enter a valid email (fx name@mail.com).";
+
+    if (!table) next.table = "Please choose a table above.";
 
     const g = Number(guests);
-    if (!Number.isFinite(g) || g < 1 || g > 20) next.guests = true;
+    if (!Number.isFinite(g) || g < 1 || g > 20)
+      next.guests = "Guests must be a number between 1 and 20.";
 
-    if (!date) next.date = true;
-    if (!trimmedPhone || !isValidPhone(trimmedPhone)) next.phone = true;
+    if (!date) next.date = "Please choose a date.";
+
+    if (!trimmedPhone) next.phone = "Please enter your phone number.";
+    else if (!isValidPhone(trimmedPhone))
+      next.phone = "Please enter a valid phone number.";
 
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -134,6 +147,7 @@ export default function BookTable() {
     setGuests("");
     setDate("");
     setComment("");
+    setErrors({});
   }
 
   async function onSubmit(e) {
@@ -141,13 +155,14 @@ export default function BookTable() {
     setMessage("");
 
     if (status !== "ready") {
+      setSubmitStatus("fail");
       setMessage("Unable to book right now — please try again later.");
       return;
     }
 
     if (!validate()) {
       setSubmitStatus("fail");
-      setMessage("Please fill in all fields correctly.");
+      setMessage("Please check the fields above.");
       return;
     }
 
@@ -244,56 +259,110 @@ export default function BookTable() {
 
             <form onSubmit={onSubmit} noValidate>
               <div className="bookFormGrid">
-                <input
-                  className={`bookInput ${errors.name ? "hasError" : ""}`}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Your Name"
-                />
+                {/* NAME */}
+                <div className="bookField">
+                  <input
+                    className={`bookInput ${errors.name ? "hasError" : ""}`}
+                    value={name}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                      setErrors((prev) => ({ ...prev, name: undefined }));
+                    }}
+                    placeholder="Your Name"
+                  />
+                  {errors.name && (
+                    <div className="fieldError">{errors.name}</div>
+                  )}
+                </div>
 
-                <input
-                  className={`bookInput ${errors.email ? "hasError" : ""}`}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your Email"
-                  type="email"
-                />
+                {/* EMAIL */}
+                <div className="bookField">
+                  <input
+                    className={`bookInput ${errors.email ? "hasError" : ""}`}
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      setErrors((prev) => ({ ...prev, email: undefined }));
+                    }}
+                    placeholder="Your Email"
+                    type="email"
+                  />
+                  {errors.email && (
+                    <div className="fieldError">{errors.email}</div>
+                  )}
+                </div>
 
-                <input
-                  className={`bookInput ${errors.table ? "hasError" : ""}`}
-                  value={table}
-                  readOnly
-                  placeholder="Table Number"
-                />
+                {/* TABLE (readOnly) */}
+                <div className="bookField">
+                  <input
+                    className={`bookInput ${errors.table ? "hasError" : ""}`}
+                    value={table}
+                    readOnly
+                    placeholder="Table Number"
+                  />
+                  {errors.table && (
+                    <div className="fieldError">{errors.table}</div>
+                  )}
+                </div>
 
-                <input
-                  className={`bookInput ${errors.guests ? "hasError" : ""}`}
-                  value={guests}
-                  onChange={(e) => setGuests(e.target.value)}
-                  placeholder="Number of Guests"
-                  inputMode="numeric"
-                />
+                {/* GUESTS */}
+                <div className="bookField">
+                  <input
+                    className={`bookInput ${errors.guests ? "hasError" : ""}`}
+                    value={guests}
+                    onChange={(e) => {
+                      setGuests(e.target.value);
+                      setErrors((prev) => ({ ...prev, guests: undefined }));
+                    }}
+                    placeholder="Number of Guests"
+                    inputMode="numeric"
+                  />
+                  {errors.guests && (
+                    <div className="fieldError">{errors.guests}</div>
+                  )}
+                </div>
 
-                <input
-                  className={`bookDate ${errors.date ? "hasError" : ""}`}
-                  type="date"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                />
+                {/* DATE */}
+                <div className="bookField">
+                  <input
+                    className={`bookDate ${errors.date ? "hasError" : ""}`}
+                    type="date"
+                    value={date}
+                    onChange={(e) => {
+                      setDate(e.target.value);
+                      setErrors((prev) => ({ ...prev, date: undefined }));
+                    }}
+                  />
+                  {errors.date && (
+                    <div className="fieldError">{errors.date}</div>
+                  )}
+                </div>
 
-                <input
-                  className={`bookInput ${errors.phone ? "hasError" : ""}`}
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  placeholder="Your Contact Number"
-                />
+                {/* PHONE */}
+                <div className="bookField">
+                  <input
+                    className={`bookInput ${errors.phone ? "hasError" : ""}`}
+                    value={phone}
+                    onChange={(e) => {
+                      setPhone(e.target.value);
+                      setErrors((prev) => ({ ...prev, phone: undefined }));
+                    }}
+                    placeholder="Your Contact Number"
+                  />
+                  {errors.phone && (
+                    <div className="fieldError">{errors.phone}</div>
+                  )}
+                </div>
 
-                <textarea
-                  className="bookTextarea"
-                  value={comment}
-                  onChange={(e) => setComment(e.target.value)}
-                  placeholder="Your Comment"
-                />
+                {/* COMMENT */}
+                <div className="bookField" style={{ gridColumn: "1 / -1" }}>
+                  <textarea
+                    className="bookTextarea"
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                    placeholder="Your Comment"
+                  />
+                </div>
               </div>
 
               <div className="bookFormActions">
