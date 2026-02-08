@@ -91,11 +91,13 @@ Brugeren får ikke tekniske fejl, men beskeder der forklarer, hvad der skal rett
 
 Projektet er udviklet individuelt.
 
-Under selve udviklingen blev arbejdet primært udført i én branch, da fokus var på at få funktionalitet og layout til at fungere korrekt.
+Under udviklingen har mit primære fokus været på at få funktionalitet, layout og API-integration til at spille sammen og fungere stabilt. Derfor er størstedelen af arbejdet lavet i én branch, så jeg kunne arbejde hurtigt og bevare overblikket, mens projektet tog form.
 
-I den afsluttende fase er projektet samlet i `main`-branchen, og commits er lavet med fokus på at samle funktionalitet og struktur.
+I den sidste del af processen har jeg samlet projektet i main-branchen og lavet commits med fokus på oprydning, struktur og et færdigt, sammenhængende resultat.
 
-Selvom der ikke er arbejdet konsekvent med feature-branches fra starten, er projektets udvikling dokumenteret via commits og struktur i repositoryet.
+Jeg er bevidst om brugen af branches og fordelene ved fx feature-branches, hvor man normalt udvikler nye funktioner eller ændringer separat og først merger dem, når de er klar. I et større projekt eller i gruppearbejde ville det helt klart være den tilgang, jeg ville vælge for at sikre bedre overblik og versionsstyring.
+
+Selvom jeg ikke har arbejdet konsekvent med feature-branches fra start i dette projekt, afspejler commits og projektets struktur stadig en iterativ arbejdsproces, hvor funktioner og design er blevet justeret og forbedret løbende.
 
 ---
 
