@@ -1,0 +1,267 @@
+.gallerySection {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.galleryHeadline {
+  font-size: 44px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-left: 3px;
+}
+
+.nightclubgalleryBottomLine {
+  height: 2px;
+  margin: 16px auto 64px;
+  display: block;
+}
+
+.galleryMosaic {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 220px;
+  gap: 0;
+  overflow: hidden;
+}
+
+.galleryTile {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.galleryTile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tileA {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+.tileB {
+  grid-column: 4 / span 3;
+  grid-row: 1;
+}
+.tileC {
+  grid-column: 7 / span 4;
+  grid-row: 1;
+}
+.tileD {
+  grid-column: 11 / span 2;
+  grid-row: 1;
+}
+.tileE {
+  grid-column: 1 / span 4;
+  grid-row: 2;
+}
+.tileF {
+  grid-column: 5 / span 4;
+  grid-row: 2;
+}
+.tileG {
+  grid-column: 9 / span 4;
+  grid-row: 2;
+}
+
+.galleryTileOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  transition: 400ms;
+  font-size: 44px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0);
+}
+
+.galleryTile:hover .galleryTileOverlay {
+  background: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.slideIn {
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: gallerySlideIn 700ms ease-out forwards;
+}
+
+@keyframes gallerySlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.s1 {
+  animation-delay: 0ms;
+}
+.s2 {
+  animation-delay: 120ms;
+}
+.s3 {
+  animation-delay: 240ms;
+}
+.s4 {
+  animation-delay: 360ms;
+}
+.s5 {
+  animation-delay: 480ms;
+}
+.s6 {
+  animation-delay: 600ms;
+}
+.s7 {
+  animation-delay: 720ms;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  border: 0;
+}
+
+.lightboxContent {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 92vw);
+  height: min(700px, 80vh);
+  background: rgba(10, 10, 16, 0.95);
+  border: 2px solid #ff2a70;
+  border-radius: 12px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.lightboxImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 0;
+  background: #ff2a70;
+  color: #000;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.lightboxNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+.lightboxPrev {
+  left: 10px;
+}
+.lightboxNext {
+  right: 10px;
+}
+
+.galleryFallback {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 60px 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 900px) {
+  .gallerySection {
+    padding: 32px 0;
+  }
+
+  .galleryHeadline {
+    font-size: 32px;
+    font-weight: 500;
+    max-width: 260px;
+    line-height: 1.05;
+    margin: 0 auto;
+  }
+
+  .galleryMosaic {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+
+  .tileA,
+  .tileB,
+  .tileC,
+  .tileD,
+  .tileE,
+  .tileF,
+  .tileG {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .galleryMosaic {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+
+  .lightboxContent {
+    width: min(92vw, 520px);
+    height: min(70vh, 520px);
+    padding: 12px;
+  }
+
+  .lightboxNav {
+    width: 46px;
+    height: 46px;
+    font-size: 30px;
+  }
+
+  .lightboxClose {
+    width: 42px;
+    height: 42px;
+  }
+}

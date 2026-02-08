@@ -1,0 +1,290 @@
+:root {
+  --pink: #ff2a70;
+}
+
+.eventsBgFull {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.eventsBgOverlay {
+  position: absolute;
+  inset: 0;
+  opacity: 60%;
+  z-index: 0;
+  background: url("../assets/bg/slider_bg_overlay.png") center top / cover
+    no-repeat;
+}
+
+.eventsContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eventsHeadline {
+  width: 1440px;
+  height: 70px;
+  margin: 0 auto;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 70px;
+}
+
+.eventsBottomLine {
+  height: 2px;
+  margin: 16px auto 64px;
+  display: block;
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 708px);
+  justify-content: center;
+  gap: 48px;
+}
+
+.eventCard {
+  width: 708px;
+  height: 497px;
+  position: relative;
+  overflow: hidden;
+}
+
+.eventCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 500ms;
+}
+
+.eventBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 54px;
+  background: #ff2a70;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  gap: 10px;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.eventBar span {
+  white-space: nowrap;
+}
+
+.eventBar span:nth-child(1),
+.eventBar span:nth-child(2) {
+  flex: 0 0 auto;
+}
+
+.eventBar span:nth-child(2) {
+  margin-left: 10px;
+}
+
+.eventBar span:nth-child(3) {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.eventDots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.dotSquare {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 2px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.dotSquare:hover {
+  border-color: var(--pink);
+}
+
+.dotSquare--active {
+  background: #ff2a70;
+  border-color: #ff2a70;
+}
+
+.eventOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  gap: 14px;
+  padding: 28px 28px 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.15));
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: 500ms;
+}
+
+.eventHover:hover .eventOverlay {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.eventHover:hover img {
+  transform: scale(1.03);
+}
+
+.eventTitle {
+  margin: 0;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.eventDesc {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.eventBtn {
+  background: #ffffff;
+  color: #000;
+  border: 0;
+  padding: 10px 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.eventBtn:hover {
+  background: #cdcccc;
+}
+
+@media (max-width: 700px) {
+  .eventsGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .eventCard {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  .eventBar {
+    font-size: 14px;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 12px 14px;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .eventOverlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    gap: 14px;
+    padding: 28px 28px 24px;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.15)
+    );
+    color: #fff;
+    opacity: 0;
+    transform: translateX(-28px);
+    transition: 500ms;
+    z-index: 2;
+  }
+
+  .eventCard.eventCard--open .eventOverlay {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .eventCard img {
+    position: relative;
+    z-index: 1;
+  }
+
+  .eventTitle {
+    font-size: 20px;
+  }
+
+  .eventDesc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .eventBtn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .eventDots {
+    margin-top: 16px;
+  }
+
+  .dotSquare {
+    width: 14px;
+    height: 14px;
+    padding: 0;
+  }
+
+  .eventsHeadline {
+    font-size: 32px;
+    font-weight: 500;
+    max-width: 260px;
+    line-height: 1.05;
+  }
+
+  .eventsBgFull {
+    padding: 38px 0;
+  }
+}

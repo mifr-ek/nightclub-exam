@@ -1,0 +1,424 @@
+:root {
+  --pink: #ff2a70;
+  --bg: #000;
+  --fg: #fff;
+}
+
+.bookTablePage {
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+}
+
+.bookTablePage .pageHero {
+  height: 272px;
+}
+
+.bookTablePage .pageHero,
+.bookTablePage .pageHeroInner,
+.bookTablePage .pageHeroCenter,
+.bookTablePage .pageHeroContent {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.bookTablePage .pageHeroInner {
+  height: auto;
+  gap: 0;
+}
+
+.bookTablePage .pageHeroTitle {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-left: 3px;
+  position: relative;
+}
+
+.bookTablePage .pageHeroTitle::after {
+  content: "";
+  display: block;
+  width: 160vh;
+  height: 2px;
+  margin: 16px auto 0;
+  background-image: url("/assets/bottom_line2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  opacity: 1;
+}
+
+.bookTablePage .pageHeroLine {
+  display: none;
+}
+
+.bookTableSection {
+  width: 100%;
+  padding: 110px 0 120px;
+}
+
+.bookTableInner {
+  width: 1440px;
+  max-width: calc(100% - 80px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tablesGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 220px);
+  justify-content: center;
+  column-gap: 54px;
+  row-gap: 48px;
+  margin: 0 auto 110px;
+}
+
+.tableBtn {
+  width: 220px;
+  height: 140px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  position: relative;
+  opacity: 0.78;
+  transform: translateY(0);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease,
+    filter 160ms ease;
+}
+
+.tableBtn img {
+  width: 220px;
+  height: 140px;
+  object-fit: contain;
+  display: block;
+  transition:
+    transform 160ms ease,
+    filter 160ms ease;
+}
+
+.tableBtn:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.7));
+}
+
+.tableBtn:hover img {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 18px rgba(255, 42, 112, 0.22));
+}
+
+.tableBtn::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border: 2px solid rgba(255, 42, 112, 0);
+  border-radius: 12px;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+  pointer-events: none;
+}
+
+.tableBtn:hover::after {
+  border-color: rgba(255, 42, 112, 0.55);
+  box-shadow: 0 0 0 2px rgba(255, 42, 112, 0.12);
+}
+
+.tableBtn.isSelected {
+  opacity: 1;
+}
+
+.tableBtn.isSelected::after {
+  border-color: rgba(255, 42, 112, 0.95);
+  box-shadow:
+    0 0 0 2px rgba(255, 42, 112, 0.25),
+    0 18px 48px rgba(0, 0, 0, 0.65);
+}
+
+.bookFormBlock {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.bookFormTitle {
+  margin: 0 0 26px;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.bookFormGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 26px;
+  align-items: start;
+}
+
+.bookInput,
+.bookDate {
+  height: 61px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 20px 18px;
+  color: #fff;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.bookInput::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.bookTextarea {
+  grid-column: 1 / -1;
+  height: 180px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 18px;
+  color: #fff;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  outline: none;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.bookTextarea::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.hasError {
+  border-color: var(--pink) !important;
+}
+
+.bookFormActions {
+  margin-top: 26px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reserveBtn {
+  width: 180px;
+  height: 61px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.95;
+  transition:
+    transform 120ms ease,
+    opacity 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+.reserveBtn:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  border-top-color: var(--pink);
+  border-bottom-color: var(--pink);
+  color: var(--pink);
+}
+
+.reserveBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.formMessage {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.formMessage.isSuccess {
+  border-color: rgba(120, 255, 180, 0.55);
+}
+
+.formMessage.isError {
+  border-color: rgba(255, 42, 112, 0.75);
+}
+
+@media (max-width: 1600px) {
+  .tablesGrid {
+    grid-template-columns: repeat(4, 220px);
+    column-gap: 44px;
+    row-gap: 44px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .tablesGrid {
+    grid-template-columns: repeat(3, 220px);
+  }
+}
+
+@media (max-width: 900px) {
+  .tablesGrid {
+    grid-template-columns: repeat(2, 220px);
+  }
+
+  .bookFormGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookFormActions {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 620px) {
+  .tablesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .bookTablePage .pageHero {
+    height: 81px;
+  }
+
+  .bookTablePage .pageHeroTitle::after {
+    width: min(92vw, 520px);
+  }
+
+  .bookTableSection {
+    padding: 60px 0 80px;
+  }
+
+  .bookTableInner {
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+  }
+
+  .tablesGrid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 26px;
+    column-gap: 0;
+    margin: 0 auto 56px;
+  }
+
+  .tableBtn {
+    width: 285px;
+    height: auto;
+    opacity: 0.9;
+    position: relative;
+  }
+
+  .tableBtn img {
+    width: 285px;
+    height: 186px;
+  }
+
+  .tableBtn::after {
+    inset: -8px;
+    border-radius: 10px;
+  }
+
+  .tableNumber {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-family: Ubuntu, system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: 0.075em;
+    color: #fff;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .tableNumber::before {
+    content: "";
+    width: 66px;
+    height: 58px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    display: block;
+    position: absolute;
+    border-radius: 6px;
+  }
+
+  .bookFormBlock {
+    width: 100%;
+    max-width: 358px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .bookFormTitle {
+    font-size: 32px;
+    line-height: 1;
+    margin: 0 0 18px;
+  }
+
+  .bookFormGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .bookInput,
+  .bookDate {
+    width: 352px;
+    max-width: 100%;
+    height: 54px;
+    padding: 18px 12px;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .bookTextarea {
+    width: 352px;
+    max-width: 100%;
+    min-height: 260px;
+    padding: 18px 12px;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .bookFormActions {
+    justify-content: flex-end;
+    margin-top: 16px;
+    padding: 0;
+  }
+
+  .reserveBtn {
+    width: 180px;
+    height: 61px;
+  }
+}

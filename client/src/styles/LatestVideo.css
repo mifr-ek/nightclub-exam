@@ -1,0 +1,135 @@
+.latestVideoSection {
+  width: 100%;
+  background: #070707;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.latestVideoHeadline {
+  font-size: 44px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.latestvideoBottomLine {
+  height: 2px;
+  margin: 16px auto 64px;
+  display: block;
+}
+
+.latestVideoFrame {
+  position: relative;
+  width: 1440px;
+  max-width: calc(100% - 80px);
+  margin: 0 auto;
+}
+
+.latestVideoFrame.fullBleed {
+  width: auto;
+}
+
+.latestVideo {
+  width: 100%;
+  height: 608px;
+  display: block;
+  object-fit: cover;
+  background: #000;
+}
+
+.latestVideoCorner {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.latestVideoCorner--tl {
+  top: 0;
+  left: 0;
+  border-top: 70px solid var(--pink);
+  border-right: 70px solid transparent;
+}
+
+.latestVideoCorner--br {
+  right: 0;
+  bottom: 0;
+  border-bottom: 70px solid var(--pink);
+  border-left: 70px solid transparent;
+}
+
+.latestVideoControls {
+  margin-top: 18px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.latestVideoArrow {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  opacity: 0.95;
+}
+
+.latestVideoArrow:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+@media (max-width: 900px) {
+  .latestVideoSection {
+    padding: 32px 0;
+  }
+
+  .latestVideoHeadline {
+    font-size: 34px;
+    font-weight: 500;
+  }
+
+  .latestVideoFrame {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .latestVideoFrame.fullBleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .latestVideo {
+    height: 260px;
+  }
+}
+
+@media (max-width: 520px) {
+  .latestVideo {
+    height: 220px;
+  }
+
+  .latestVideoCorner--tl {
+    border-top-width: 40px;
+    border-right-width: 40px;
+  }
+
+  .latestVideoCorner--br {
+    border-bottom-width: 40px;
+    border-left-width: 40px;
+  }
+}
+
+@media (max-width: 420px) {
+  .latestVideo {
+    height: 210px;
+  }
+}

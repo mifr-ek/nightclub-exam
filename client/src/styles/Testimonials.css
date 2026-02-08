@@ -1,0 +1,178 @@
+.testimonialsSection {
+  position: relative;
+  width: 100%;
+  min-height: 746px;
+  padding: 120px 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.testimonialsOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.717);
+}
+
+.testimonialsInner {
+  position: relative;
+  width: 1440px;
+  max-width: calc(100% - 80px);
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.testiCard {
+  width: 55%;
+  display: grid;
+  place-items: center;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 260ms ease,
+    transform 260ms ease;
+  will-change: opacity, transform;
+}
+
+.testiCard.isFading {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.testiAvatar {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  background: #111;
+}
+
+.testiName {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 14px 0 12px;
+  color: #fff;
+}
+
+.testiContent {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 1440px;
+  margin: 0 auto 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.testiSocial {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.testiIcon {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #fff;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  text-decoration: none;
+  opacity: 0.95;
+  transition:
+    transform 120ms ease,
+    opacity 120ms ease;
+}
+
+.testiIcon svg {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+}
+
+.testiIcon:hover {
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+.testiDots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.testiDot {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.testiDot.active {
+  background: var(--pink);
+  border-color: var(--pink);
+}
+
+.testimonialsFallback {
+  color: #fff;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .testimonialsSection {
+    padding: 80px 0;
+  }
+
+  .testimonialsInner {
+    max-width: calc(100% - 32px);
+  }
+
+  .testiCard {
+    width: 100%;
+  }
+
+  .testiAvatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .testiName {
+    font-size: 24px;
+  }
+
+  .testiContent {
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 0 8px 25px;
+  }
+
+  .testimonialsOverlay {
+    background: rgb(0 0 0 / 90%);
+  }
+}
+
+@media (max-width: 520px) {
+  .testiSocial {
+    gap: 12px;
+  }
+
+  .testiIcon {
+    width: 44px;
+    height: 44px;
+  }
+}

@@ -1,0 +1,256 @@
+:root {
+  --pink: #ff2a70;
+  --bg: #000;
+  --fg: #fff;
+}
+
+.contactPage {
+  min-height: 100vh;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+.contactPage .pageHero {
+  height: 272px;
+}
+
+.contactPage .pageHero,
+.contactPage .pageHeroInner,
+.contactPage .pageHeroCenter,
+.contactPage .pageHeroContent {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.contactPage .pageHeroInner {
+  height: auto;
+  gap: 0;
+}
+
+.contactPage .pageHeroTitle {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-left: 3px;
+  position: relative;
+  margin: 0;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.contactPage .pageHeroTitle::after {
+  content: "";
+  display: block;
+  width: 160vh;
+  height: 2px;
+  margin: 16px auto 0;
+  background-image: url("/assets/bottom_line2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  opacity: 1;
+}
+
+.contactPage .pageHeroLine {
+  display: none;
+}
+
+.contactSection {
+  padding: 70px 16px 90px;
+  display: grid;
+  justify-items: center;
+  background: #000;
+}
+
+.contactForm {
+  width: 704px;
+  max-width: 100%;
+  display: grid;
+  gap: 14px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.contactField {
+  display: grid;
+  gap: 8px;
+}
+
+.contactInput,
+.contactTextarea {
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  outline: none;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  padding: 22px 24px;
+  box-sizing: border-box;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.contactTextarea {
+  min-height: 320px;
+  resize: vertical;
+}
+
+.contactInput::placeholder,
+.contactTextarea::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contactInput:focus,
+.contactTextarea:focus {
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 2px rgba(255, 42, 112, 0.12);
+}
+
+.hasError {
+  border-color: var(--pink) !important;
+}
+
+.fieldError {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--pink);
+  opacity: 0.95;
+}
+
+.contactActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.contactSend {
+  width: 180px;
+  height: 61px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+  font-family: Ubuntu, system-ui, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.95;
+  transition:
+    transform 120ms ease,
+    opacity 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+.contactSend:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  border-top-color: var(--pink);
+  border-bottom-color: var(--pink);
+  color: var(--pink);
+}
+
+.contactSend:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.formMessage {
+  margin-top: 6px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.92);
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.formMessage.isSuccess {
+  border-color: rgba(120, 255, 180, 0.55);
+}
+
+.formMessage.isError {
+  border-color: rgba(255, 42, 112, 0.75);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .contactPage .pageHero {
+    height: 81px !important;
+    min-height: 81px !important;
+    overflow: hidden;
+  }
+
+  .contactPage .pageHeroInner,
+  .contactPage .pageHeroCenter,
+  .contactPage .pageHeroContent {
+    height: 81px !important;
+    min-height: 81px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .contactPage .pageHeroTitle::after {
+    width: min(92vw, 520px);
+    margin-top: 10px;
+  }
+
+  .contactSection {
+    padding: 46px 0 60px;
+  }
+
+  .contactForm {
+    width: 100%;
+    max-width: 352px;
+    padding: 0 24px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    gap: 12px;
+  }
+
+  .contactInput,
+  .contactTextarea {
+    font-size: 16px;
+    padding: 16px 14px;
+  }
+
+  .contactTextarea {
+    min-height: 220px;
+  }
+
+  .contactActions {
+    justify-content: flex-end;
+  }
+
+  .contactSend {
+    width: 180px;
+    height: 61px;
+  }
+}

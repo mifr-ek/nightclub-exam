@@ -1,0 +1,207 @@
+:root {
+  --pink: #ff2a70;
+  --bg: #000;
+  --fg: #fff;
+}
+
+.loginPage {
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+}
+
+.loginPage .pageHero {
+  height: 272px;
+}
+
+.loginPage .pageHero,
+.loginPage .pageHeroInner,
+.loginPage .pageHeroCenter,
+.loginPage .pageHeroContent {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.loginPage .pageHeroInner {
+  height: auto;
+  gap: 0px;
+}
+
+.loginPage .pageHeroTitle {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-left: 3px;
+  position: relative;
+}
+
+.loginPage .pageHeroTitle::after {
+  content: "";
+  display: block;
+  width: 160vh;
+  height: 2px;
+  margin: 16px auto 0;
+  background-image: url("/assets/bottom_line2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  opacity: 1;
+}
+
+.loginPage .pageHeroLine {
+  display: none;
+}
+
+.loginSection {
+  width: 100%;
+  padding: 110px 16px 140px;
+}
+
+.loginInner {
+  width: 1100px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  justify-items: center;
+}
+
+.loginForm {
+  width: 704px;
+  max-width: 100%;
+
+  display: grid;
+  gap: 22px;
+}
+
+.loginInput {
+  width: 100%;
+  height: 61px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 20px 18px;
+  color: #fff;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 18px;
+  outline: none;
+}
+
+.loginInput::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.loginInput:focus {
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.loginActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.loginBtn {
+  width: 180px;
+  height: 61px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.95;
+  transition:
+    transform 120ms ease,
+    opacity 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+.loginBtn:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  border-top-color: var(--pink);
+  border-bottom-color: var(--pink);
+  color: var(--pink);
+}
+
+.loginHint {
+  margin: 6px 0 0;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .loginPage .pageHero {
+    height: 81px !important;
+    min-height: 81px !important;
+    overflow: hidden;
+  }
+
+  .loginPage .pageHeroInner,
+  .loginPage .pageHeroCenter,
+  .loginPage .pageHeroContent {
+    height: 81px !important;
+    min-height: 81px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .loginPage .pageHeroTitle::after {
+    width: min(92vw, 520px);
+    margin-top: 10px;
+  }
+
+  .loginSection {
+    padding: 60px 0 90px;
+  }
+
+  .loginInner {
+    width: 100%;
+    padding: 0 24px;
+    display: grid;
+    justify-items: center;
+  }
+
+  .loginForm {
+    width: 100%;
+    max-width: 352px;
+    gap: 14px;
+  }
+
+  .loginInput {
+    height: 54px;
+    font-size: 16px;
+    padding: 16px 14px;
+  }
+
+  .loginActions {
+    justify-content: flex-end;
+  }
+
+  .loginBtn {
+    width: 180px;
+    height: 61px;
+  }
+}

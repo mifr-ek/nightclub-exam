@@ -1,0 +1,427 @@
+:root {
+  --pink: #ff2a70;
+}
+
+.blogPostPage {
+  background: #000;
+  color: #fff;
+}
+
+.blogPostHero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.blogPostHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  pointer-events: none;
+}
+
+.blogPostHeroInner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+
+.blogPostHeroTitle {
+  margin: 0;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.blogPostHeroBottomLine {
+  height: 2px;
+  margin: 16px auto 0;
+  display: block;
+}
+
+.blogPostInner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.blogPostImgWrap {
+  width: 100%;
+  max-height: 520px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.blogPostImgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blogPostTitle {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.blogPostMeta {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 0 0 32px;
+}
+
+.blogPostBody {
+  margin-bottom: 64px;
+}
+
+.blogPostText {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.9;
+  opacity: 0.95;
+  white-space: pre-line;
+  margin: 0 0 18px;
+}
+
+.blogPostSectionTitle {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 60px 0 24px;
+  text-transform: uppercase;
+}
+
+.blogPostComments {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 64px;
+}
+
+.blogPostComment {
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.blogPostCommentTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.blogPostCommentName {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 600;
+}
+
+.blogPostCommentDot {
+  opacity: 0.5;
+}
+
+.blogPostCommentDate {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.blogPostCommentText {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.blogPostForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+}
+
+.blogPostFormRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.blogPostInput,
+.blogPostTextarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 14px 16px;
+  color: #fff;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.blogPostTextarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.blogPostInput::placeholder,
+.blogPostTextarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.blogPostInput:focus,
+.blogPostTextarea:focus {
+  outline: none;
+  border-color: var(--pink);
+}
+
+.blogPostFormActions {
+  margin-top: 8px;
+}
+
+.blogPostSubmit {
+  width: 160px;
+  height: 46px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 120ms ease;
+}
+
+.blogPostSubmit:hover {
+  color: var(--pink);
+  border-color: var(--pink);
+}
+
+.blogPostSubmit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.blogPostBack {
+  display: inline-block;
+  margin-top: 60px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+  font-family: Ubuntu, system-ui, sans-serif;
+}
+
+.blogPostBack:hover {
+  color: var(--pink);
+}
+
+.hasError {
+  border-color: var(--pink) !important;
+}
+
+.formMessage {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.formMessage.isSuccess {
+  border-color: rgba(120, 255, 180, 0.55);
+}
+
+.formMessage.isError {
+  border-color: rgba(255, 42, 112, 0.75);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 900px) {
+  .blogPostInner {
+    padding: 50px 16px;
+  }
+
+  .blogPostTitle {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .blogPostText {
+    font-size: 16px;
+  }
+
+  .blogPostImgWrap {
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 700px) {
+  .blogPostHero {
+    height: 81px;
+  }
+
+  .blogPostHeroOverlay {
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  .blogPostHeroTitle {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+  }
+
+  .blogPostHeroBottomLine {
+    height: 2px;
+    margin: 12px auto 0;
+  }
+
+  .blogPostInner {
+    padding: 0 24px 60px;
+    max-width: 420px;
+  }
+
+  .blogPostImgWrap {
+    margin: 18px 0 18px;
+    max-height: none;
+    height: 221px;
+    overflow: hidden;
+  }
+
+  .blogPostImgWrap img {
+    height: 221px;
+  }
+
+  .blogPostTitle {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin: 0 0 10px;
+  }
+
+  .blogPostMeta {
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    margin: 0 0 18px;
+    color: var(--pink);
+    opacity: 1;
+  }
+
+  .blogPostText {
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.92;
+    margin-bottom: 16px;
+  }
+
+  .blogPostSectionTitle {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 46px 0 18px;
+  }
+
+  .blogPostComments {
+    gap: 34px;
+    margin-bottom: 40px;
+  }
+
+  .blogPostComment {
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .blogPostCommentTop {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .blogPostCommentName {
+    font-weight: 500;
+  }
+
+  .blogPostCommentDot {
+    display: none;
+  }
+
+  .blogPostCommentDate {
+    font-size: 16px;
+    color: var(--pink);
+    opacity: 1;
+  }
+
+  .blogPostCommentText {
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.9;
+  }
+
+  .blogPostForm {
+    max-width: 353px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 18px;
+  }
+
+  .blogPostFormRow {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .blogPostInput,
+  .blogPostTextarea {
+    font-size: 16px;
+    padding: 16px 16px;
+    border-color: rgba(255, 255, 255, 0.55);
+  }
+
+  .blogPostTextarea {
+    min-height: 360px;
+    resize: both;
+  }
+
+  .blogPostFormActions {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .blogPostSubmit {
+    width: 180px;
+    height: auto;
+    padding: 20px 18px;
+    border: 0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .blogPostSubmit:hover {
+    color: var(--pink);
+    border-top-color: var(--pink);
+    border-bottom-color: var(--pink);
+  }
+
+  .blogPostBack {
+    margin-top: 34px;
+    opacity: 0.9;
+  }
+}

@@ -1,0 +1,390 @@
+:root {
+  --pink: #ff2a70;
+}
+
+.trackSection {
+  background: #000;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 120px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.trackHeadline {
+  font-size: 44px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.nightclubtrackBottomLine {
+  height: 2px;
+  margin: 16px auto 64px;
+  display: block;
+}
+
+.trackWrap {
+  width: 1440px;
+  max-width: calc(100% - 80px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 336px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.trackPlayer {
+  text-align: left;
+  padding: 16px 0;
+}
+
+.trackSongTitle {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.trackProgress,
+.volRange {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  outline: none;
+}
+
+.trackProgress {
+  width: 350px;
+  max-width: 100%;
+  height: 4px;
+  display: block;
+  margin: 0 0 14px;
+}
+
+.trackProgress::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--pink);
+  border-radius: 999px;
+}
+
+.trackProgress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #fff;
+  margin-top: -7px;
+}
+
+.trackProgress::-moz-range-track {
+  height: 4px;
+  background: var(--pink);
+  border-radius: 999px;
+}
+
+.trackProgress::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: none;
+  background: #fff;
+}
+
+.trackTime {
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin: 0 0 18px;
+  width: 350px;
+  max-width: 100%;
+}
+
+.trackControls {
+  width: 350px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  align-items: center;
+  margin: 0 auto 18px;
+}
+
+.iconBtn {
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.95;
+  display: grid;
+  place-items: center;
+}
+
+.playCircleBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.trackVolumeRow {
+  width: 350px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.volRange {
+  width: 152px;
+  height: 4px;
+}
+
+.volRange::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--pink);
+  border-radius: 999px;
+}
+
+.volRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #fff;
+  margin-top: -5px;
+}
+
+.volRange::-moz-range-track {
+  height: 4px;
+  background: var(--pink);
+  border-radius: 999px;
+}
+
+.volRange::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: none;
+  background: #fff;
+}
+
+.trackCoverCard {
+  width: 399px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.trackHero {
+  width: 399px;
+  max-width: 100%;
+  height: 264px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+.trackHero::before,
+.trackHero::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.trackHero::before {
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, var(--pink) 0 50%, transparent 50% 100%);
+}
+
+.trackHero::after {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(315deg, var(--pink) 0 50%, transparent 50% 100%);
+}
+
+.trackHero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coverPlayBtn {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  border: 4px solid var(--pink);
+  background: rgba(0, 0, 0, 0.15);
+  color: var(--pink);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 4;
+}
+
+.trackCoverCaption {
+  margin: 14px 0 18px;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.95;
+}
+
+.trackCoverNav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.squareNavBtn {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.trackGalleryWrap {
+  width: 1440px;
+  max-width: calc(100% - 80px);
+  margin: 22px auto 0;
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;
+  gap: 16px;
+}
+
+.trackArrow {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.trackGallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  overflow: hidden;
+}
+
+.trackThumb {
+  position: relative;
+  height: 160px;
+  border: 0;
+  padding: 0;
+  background: #000;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.85;
+}
+
+.trackThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.trackThumb.active {
+  opacity: 1;
+  outline: 2px solid var(--pink);
+  outline-offset: -2px;
+}
+
+.trackThumbPlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 26px;
+}
+
+.trackHero.fullBleed {
+  width: 399px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .trackSection {
+    padding: 36px 0 0px;
+  }
+
+  .trackHeadline {
+    font-size: 34px;
+    letter-spacing: 0.075em;
+    font-weight: 500;
+  }
+
+  .nightclubtrackBottomLine {
+    margin: 12px auto 26px;
+    opacity: 0.8;
+  }
+
+  .trackWrap {
+    width: 100%;
+    max-width: calc(100% - 32px);
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .trackPlayer {
+    text-align: center;
+    padding: 0;
+  }
+
+  .trackSongTitle {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .trackControls {
+    margin-bottom: 18px;
+  }
+
+  .trackGalleryWrap {
+    display: none;
+  }
+
+  .trackHero.fullBleed {
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .trackProgress {
+    display: unset;
+  }
+}

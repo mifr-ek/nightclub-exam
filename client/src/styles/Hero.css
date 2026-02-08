@@ -1,0 +1,189 @@
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.hero__shade {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+.hero__center {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0 24px 150px;
+}
+
+.hero__brand {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 14px;
+}
+
+.heroLogoImg {
+  width: 952px;
+  height: 117px;
+  object-fit: contain;
+  display: block;
+}
+
+.heroTagline {
+  margin: 0;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.6em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.heroBottomLine {
+  width: 839px;
+  height: 67px;
+  object-fit: contain;
+  display: block;
+}
+
+.logoFoldIn {
+  opacity: 0;
+  transform: perspective(900px) rotateX(70deg) scale(0.96);
+  transform-origin: top center;
+  filter: blur(6px);
+
+  animation: heroLogoFoldIn 900ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.taglineDropIn {
+  opacity: 0;
+  transform: translateY(-16px);
+
+  animation: heroTaglineDropIn 700ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 520ms;
+}
+
+.heroBottomLine {
+  opacity: 0;
+  animation: heroLineFade 700ms ease forwards;
+  animation-delay: 760ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logoFoldIn,
+  .taglineDropIn,
+  .heroBottomLine {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+@keyframes heroLogoFoldIn {
+  0% {
+    opacity: 0;
+    transform: perspective(900px) rotateX(70deg) scale(0.96);
+    filter: blur(6px);
+  }
+  60% {
+    opacity: 1;
+    transform: perspective(900px) rotateX(0deg) scale(1.01);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(900px) rotateX(0deg) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes heroTaglineDropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroLineFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .heroLogoImg {
+    width: min(952px, 86vw);
+    height: auto;
+  }
+
+  .heroTagline {
+    width: min(900px, 92vw);
+    font-size: clamp(16px, 2.3vw, 32px);
+    letter-spacing: clamp(0.22em, 1.6vw, 0.6em);
+  }
+
+  .heroBottomLine {
+    width: min(839px, 84vw);
+    height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero__center {
+    padding: 0 18px 130px;
+  }
+
+  .hero__brand {
+    gap: 10px;
+  }
+
+  .heroLogoImg {
+    width: min(78vw, 340px);
+    height: auto;
+  }
+
+  .heroTagline {
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    opacity: 0.95;
+  }
+
+  .heroBottomLine {
+    width: min(84vw, 360px);
+    height: auto;
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero__center {
+    padding: 0 14px 120px;
+  }
+
+  .heroTagline {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+  }
+}
